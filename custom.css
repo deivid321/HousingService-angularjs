@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+}
+.navbar .nav,
+.navbar .nav > li {
+    float:none;
+    display:inline-block;
+    vertical-align: top;
+}
+
+.nav.navbar-nav li a {
+    text-align: center;
+    color: #FFFF33;
+}
+
+.nav.navbar-nav li a:focus,
+.nav.navbar-nav li a:hover {
+    background-color: black;
+    color:#FFFF00;
+}
+
+.navbar {
+    background-color: #cc0033;
+    margin-bottom: 0;
+}
+
+.navbar-inner {
+    text-align:center;
+}
+
+.jumbotron{
+    margin-top: 0;
+    max-height: 400px;
+    padding: 0px;
+    background-color: #ffff99;
+}
+
+.btn{
+    background-color: black;
+    color: #FFFF00;
+}
+
+
+

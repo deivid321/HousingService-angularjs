@@ -1,0 +1,52 @@
+<h1>Add Room!</h1>
+<div id="container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">Submit new room!</h1>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal row-border" action="#rooms" ng-controller="roomUpdateCtrl" action="#rooms" ng-submit="updateRoom()">
+                    <h3>{{$scope.room.street}}fsdfd</h3>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Street:</label>
+                        <div class="col-md-7">
+                            <input type="text" ng-model="room.street" required class="form-control" />
+                            <errors path="street" cssClass="error"/>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <label class="col-md-4 control-label">House number:</label>
+                        <div class="col-md-7">
+                            <input type="number" ng-model="room.houseNumber" required class="form-control"/>
+                            <errors path="houseNumber" cssClass="error"/>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <label class="col-md-4 control-label">Room number:</label>
+                        <div class="col-md-7">
+                            <input type="number" ng-model="room.roomNumber" required class="form-control"/>
+                            <errors path="roomNumber" cssClass="error"/>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <label class="col-md-4 control-label">Max students:</label>
+                        <div class="col-md-7">
+                            <input class="form-control" type="number" ng-model="room.maxStudents" required min="1" max="3"/>
+                            <errors path="maxStudents" cssClass="error"/>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="clearfix visible-md-block"></div>
+                        <label class="col-md-4 control-label">Free</label>
+                        <div class="col-md-7">
+                            <input class="form-control" type="checkbox" ng-model="room.free"/>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-3">
+                            <input id="save" type="submit" class="form-control" value="Save">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

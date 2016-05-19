@@ -1,0 +1,41 @@
+<h1>All provided rooms</h1>
+<div class="container">
+    <div ng-controller="roomsCtrl">
+    <table class="table table-bordered table-striped table-hover" align="center">
+        <tbody>
+        <tr>
+            <th class="text-center">Id
+            </th>
+            <th class="text-center">Street
+            </th>
+            <th class="text-center">House number
+            </th>
+            <th class="text-center">Room number
+            </th>
+            <th class="text-center">Free
+            </th>
+            <th class="text-center">Free space
+            </th>
+            <th class="text-center">Students
+            </th>
+            <th class="text-center">Edit
+            </th>
+            <th class="text-center">Delete
+            </th>
+        </tr>
+        <tr ng-repeat="x in roomsList">
+            <td>{{ x.id }}</td>
+            <td>{{ x.street }}</td>
+            <td>{{ x.houseNumber}}</td>
+            <td>{{ x.roomNumber }}</td>
+            <td>{{ x.free}}</td>
+            <td>{{ x.maxStudents }}</td>
+            <td><li ng-repeat="y in x.studenList"> {{ y.name }} </li></td>
+            <td><button ng-click='getUpdateRoomForm(x.id)'>Update</button></td> <!--make on click method editFuction(x.id)-->
+            <td><button ng-click='deleteRoom(x.id)'>Delete</button> </td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+<p><a class="btn btn-primary btn-lg" href="#/addRoom" role="button">Add room</a></p>
